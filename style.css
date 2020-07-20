@@ -1,0 +1,459 @@
+/*Top Nav Bar and Menus - until line 262*/
+p {
+    padding: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style: none;
+  }
+
+.show {
+    display: block;
+  }
+
+.nav li {
+    font-size: 14px;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+
+h2 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer {
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40px;
+    padding: 15px 25px;
+    width: calc(100% - 50px);
+}
+
+.hamburger-menu {
+    display: block; 
+    cursor: pointer;
+  }
+  
+  @media (min-width: 1085px) {
+    .hamburger-menu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1085px) {
+    .nav {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1085px) {
+    .login {
+      display: block; 
+    }  
+  }
+
+  .side-menu-position {
+    padding-top: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .side-menu-design {
+    background-color: grey;
+    background-size: 1300px 700px;
+    background-repeat: repeat;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+  }
+
+.dropdown-menu {
+    background-color: white;
+    box-shadow: 0 0 2rem rgba(0,0,0,.1); 
+    display: none;
+    padding: 15px;
+    position: absolute; 
+    top: 60px; 
+    width: 250px;
+    z-index: 10; 
+  }
+  
+  .placeholder {
+    background: lightslategray;
+    height: 100vh;
+  }
+
+  .global-header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    padding: 15px 25px;
+    width: calc(100% - 50px);
+  }
+
+  .nav-left {
+    align-items: center;
+    display: flex;
+  }
+  
+  .nav {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  @media (min-width: 1085px) {
+    .nav {
+      display: flex;
+    }
+  }
+  
+
+  .dropdown-menu#menu-1 {
+    left: 100 px;
+  }
+  
+  .dropdown-menu#menu-2 {
+    left: 200px;
+    min-width: 400px; 
+  }
+  
+  .dropdown-menu#menu-3 {
+    left: 300px;
+    min-width: 400px; 
+  }
+
+  .dropdown-menu#menu-4 {
+    left: 490px;
+    min-width: 400px; 
+  }
+  
+  .menu-header {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 10px 8px 10px; 
+    text-transform: uppercase;
+  }
+  
+  .menu-item-list {
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  #menu-2 .menu-item-list, 
+  #menu-3 .menu-item-list {
+    column-count: 2;
+    column-gap: 20px;
+  }
+  
+  .menu-item-list li a,
+  .menu-item-list li a:visited,
+  .menu-item-list li a:focus {
+    color: #454545;
+    display: block;
+    padding: 10px; 
+    text-decoration: none;
+  }
+  
+  .menu-item-list li a:hover {
+    background-color: rgb(242,242,242);
+    color: #1264a3;
+  }
+  
+  #fade-in-header {
+    display: none;
+    position: fixed;
+    top: 0;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .side-menu-position {
+    padding-top: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+  }
+  
+  .side-menu-design {
+    background-image: url(Images/background-image.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.5;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+  }
+  
+  .side-menu-header {
+    border-bottom: 1px solid rgba(255,255,255,.1); 
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px 25px 25px;  
+  }
+  
+  .side-menu-content {
+    color: white;
+    font-size: 24px; 
+    margin: 25px;
+    padding-left: 0; 
+  }
+  
+  .side-menu-content li {
+    list-style: none;
+    margin-bottom: 25px;
+  }
+  
+  .show-menu {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  .hidden {
+      display: none !important;
+  }
+
+  .visuallyhidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(50%);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      white-space: nowrap; 
+  }
+
+  .visuallyhidden.focusable:active,
+  .visuallyhidden.focusable:focus {
+      clip: auto;
+      -webkit-clip-path: none;
+      clip-path: none;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+      white-space: inherit;
+  }
+
+  .invisible {
+      visibility: hidden;
+  }
+
+
+  /*MainSection*/
+.hero {
+  background-image: url(./Images/parallax-1.jpg);
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    
+.company-name span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 8px;
+}
+
+.company-name {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #5e555b;
+}
+.options-section {
+    background-image: url(./Images/parallax-2.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.option-text {
+    background-color: whitesmoke;
+    height: 200px;
+}
+
+.buttons {
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: #5e555b;
+    border-color:black;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Testimonials Section*/
+.container {
+    color: whitesmoke;
+    background-image: url(./Images/parallax-3.jpg);
+    height: 1100px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+.testimonial-section {
+    display: flex;
+}
+.testimonial{
+    text-align: center;
+    margin: 0 15px;
+}
+.testimonial .description{
+    padding: 15px;
+    margin: 0;
+    border-top: 4px solid #73438f;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight:bold;
+    line-height: 30px;
+    position: relative;
+}
+.testimonial .description:after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #73438f;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+.testimonial .pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 40px auto;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+}
+.testimonial .title{
+    font-size: 18px;
+    font-weight: bold;
+    color: whitesmoke;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+.testimonial .post{
+    display: block;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+.owl-theme .owl-controls{
+    margin-top: 30px;
+}
+.owl-theme .owl-controls .owl-page span{
+    background: #ccc;
+    opacity: 1;
+    transition: all 0.4s ease 0s;
+}
+
+/*COMPANY GRID HERE*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 15px;
+  }
+
+  .column {
+    flex: 30%;
+    max-width: 30%;
+    padding: 15px 15px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .option-text {
+      flex-direction: column;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .option-text {
+      flex-direction: column;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+ .company-grid {
+    background-color: white;
+ }
+
